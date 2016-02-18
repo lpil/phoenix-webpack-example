@@ -10,10 +10,10 @@ erl_crash.dump
 # Static artifacts
 /node_modules
 
-# Since we are building assets from web/static,
-# we ignore priv/static. You may want to comment
-# this depending on your deployment strategy.
-/priv/static/
+# Ignore compiled frontend assets
+/priv/static/js
+/priv/static/css
+/priv/static/fonts
 
 # The config/prod.secret.exs file by default contains sensitive
 # data and you should not commit it into version control.

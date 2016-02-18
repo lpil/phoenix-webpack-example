@@ -11,7 +11,15 @@ config :my_app, MyApp.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
+  watchers: [
+    # Run a webpack watcher to compile the frontend
+    node: [
+      "node_modules/webpack/bin/webpack.js",
+      "--watch",
+      "--progress",
+      "--colors",
+    ],
+  ]
 
 # Watch static and templates for browser reloading.
 config :my_app, MyApp.Endpoint,
